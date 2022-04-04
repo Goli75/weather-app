@@ -1,6 +1,5 @@
 let now = new Date();
 let date = document.querySelector("div");
-
 let hours = now.getHours();
 if (hours < 10) {
   hours = `0${hours}`;
@@ -22,6 +21,7 @@ let day = days[now.getDay()];
 date.innerHTML = `${day}, ${hours}:${minutes}`;
 
 let units = "metric";
+ 
 
 function showPosition(response) {
   document.querySelector("h1").innerHTML = response.data.name;
@@ -42,6 +42,7 @@ function searchPosition(position) {
   axios.get(apiUrl).then(showPosition);
 }
 
+
 function search(event) {
   event.preventDefault();
   let apiKey = "a71922a462ba2496a97237966e452f8d";
@@ -53,3 +54,6 @@ let forms = document.querySelector("#searched-city");
 forms.addEventListener("submit", search);
 let buttonLocation = document.querySelector("#current");
 buttonLocation.addEventListener("click", currentPosition);
+
+let humidityElement= document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+let windSpeedElement= document.querySelector("#windSpeed").innerHTML = math.round(response.data.wind.speed);

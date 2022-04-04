@@ -38,3 +38,14 @@ right: 7px;
 
  }
  
+ .description {
+  font-size: 20px;
+  color: rgb(8, 8, 139);
+ line-height: 50px;
+  text-align: center;
+}
+.windSpeed {
+  font-size: 20px;
+  color: rgb(77, 21, 74);
+  text-align: center;
+  
