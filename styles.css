@@ -30,10 +30,11 @@ h1 {
   .temperature {font-size= 50px;
   font-weight: bold;}
 .link {
-font-size:100px;
-position:absolute;
-top: 25px;
-right: 20px;}
+font-size:30px;
+position: relative;
+top: 5px;
+color:rgb(77, 21, 74)
+}
 
  .description {
   font-size: 20px;
@@ -46,7 +47,4 @@ right: 20px;}
   color: rgb(77, 21, 74);
   text-align: center;
 }
- 
-.farenheit {
-  position: 200px;
-}
+
