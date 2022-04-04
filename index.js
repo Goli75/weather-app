@@ -54,6 +54,6 @@ let forms = document.querySelector("#searched-city");
 forms.addEventListener("submit", search);
 let buttonLocation = document.querySelector("#current");
 buttonLocation.addEventListener("click", currentPosition);
-
-let humidityElement= document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-let windSpeedElement= document.querySelector("#windSpeed").innerHTML = math.round(response.data.wind.speed);
+let humidityElement = document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+let windSpeedElement = document.querySelector("#windSpeed").innerHTML = math.round(response.data.wind.speed);
+let iconElement = document.querySelector("#icon").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
