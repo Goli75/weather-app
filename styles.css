@@ -29,15 +29,12 @@ h1 {
   }
   .temperature {font-size= 50px;
   font-weight: bold;}
- a {
-font-size: 12px;
-
+.link {
+font-size:100px;
 position:absolute;
-top: 15px;
-right: 7px;
+top: 25px;
+right: 20px;}
 
- }
- 
  .description {
   font-size: 20px;
   color: rgb(8, 8, 139);
@@ -50,4 +47,6 @@ right: 7px;
   text-align: center;
 }
  
-
+.farenheit {
+  position: 200px;
+}
