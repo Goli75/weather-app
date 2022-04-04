@@ -37,4 +37,17 @@ top: 15px;
 right: 7px;
 
  }
+ .description {
+  font-size: 15px;
+  color: grey;
+ line-height: 15px;
+  text-align: left;
+}
+.windSpeed {
+  font-size: 12px;
+  color: grey;
+  text-align: left;
+  line-height: 15px;
+}
+
  
