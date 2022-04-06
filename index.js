@@ -28,6 +28,11 @@ function showPosition(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+ document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+ document.querySelector("#windSpeed").innerHTML = Math.round(
+   response.data.wind.speed
+   );
+ document.querySelector("#icon").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 function currentPosition(event) {
   event.preventDefault();
@@ -54,6 +59,4 @@ let forms = document.querySelector("#searched-city");
 forms.addEventListener("submit", search);
 let buttonLocation = document.querySelector("#current");
 buttonLocation.addEventListener("click", currentPosition);
-let humidityElement = document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-let windSpeedElement = document.querySelector("#windSpeed").innerHTML = math.round(response.data.wind.speed);
-let iconElement = document.querySelector("#icon").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
+
