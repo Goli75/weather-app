@@ -28,7 +28,8 @@ h1 {
     font-size: 20px;
   }
   .temperature {font-size= 50px;
-  font-weight: bold;}}
+  font-weight: bold;
+}
 
  .description {
   font-size: 20px;
@@ -42,3 +43,7 @@ h1 {
   text-align: center;
 }
 
+ .active {
+   color: black;
+   cursor: default;
+ }

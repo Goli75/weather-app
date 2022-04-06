@@ -33,6 +33,7 @@ function showPosition(response) {
    response.data.wind.speed
    );
  document.querySelector("#icon").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+celciusTemperature = Math.round(response.data.main.temp);
 }
 function currentPosition(event) {
   event.preventDefault();
@@ -55,8 +56,22 @@ function search(event) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showPosition);
 }
+
+function showFarenheitTemp(event) {
+  event.preventDefault();
+let farenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+document.querySelector("#temperature").innerHTML = Math.round(farenheitTemperature);
+}
+
+ function showCelciusTemp(event) {
+event.preventDefault();
+document.querySelector("#temperature").innerHTML = celciusTemperature;
+ }
+let celciusTemperature = null;
 let forms = document.querySelector("#searched-city");
 forms.addEventListener("submit", search);
 let buttonLocation = document.querySelector("#current");
 buttonLocation.addEventListener("click", currentPosition);
 
+document.querySelector("#farenheit").addEventListener("click", showFarenheitTemp);
+document.querySelector("#celcius").addEventListener("click", showCelciusTemp);
