@@ -28,13 +28,7 @@ h1 {
     font-size: 20px;
   }
   .temperature {font-size= 50px;
-  font-weight: bold;}
-.link {
-font-size:30px;
-position: relative;
-top: 5px;
-color:rgb(77, 21, 74)
-}
+  font-weight: bold;}}
 
  .description {
   font-size: 20px;
