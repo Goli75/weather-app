@@ -59,12 +59,16 @@ function search(event) {
 
 function showFarenheitTemp(event) {
   event.preventDefault();
+  farenheit.classList.add("active");
+  celcius.classList.remove("active");
 let farenheitTemperature = (celciusTemperature * 9) / 5 + 32;
 document.querySelector("#temperature").innerHTML = Math.round(farenheitTemperature);
 }
 
  function showCelciusTemp(event) {
 event.preventDefault();
+celcius.classList.add("active");
+farenheit.classList.remove("active");
 document.querySelector("#temperature").innerHTML = celciusTemperature;
  }
 let celciusTemperature = null;
