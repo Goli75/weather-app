@@ -17,7 +17,7 @@ h1 {
     text-align: center;
   }
   form {
-    padding: 50px;
+    padding: 50px 20px;
     font-size: 20px;
   }
   button {
@@ -58,9 +58,19 @@ text-decoration: none;
  .address {
    position:relative; 
    top: 25px;
-   left: 1050px;
+   left:88%;
  }
  .current {
    position: relative;
-   bottom: 2px;
+   top: 3px;
+   
+ }
+ .search-button {
+   position: relative;
+   top:5px;
+ }
+ .city {
+   position: relative;
+   
+ bottom: 5px;
  }
