@@ -22,6 +22,9 @@ date.innerHTML = `${day}, ${hours}:${minutes}`;
 
 let units = "metric";
  
+function displayWeatherForecast() {
+  document.querySelector("#weather-forecast").innerHTML = "weather-forecast"; 
+}
 
 function showPosition(response) {
   document.querySelector("h1").innerHTML = response.data.name;
@@ -79,3 +82,4 @@ buttonLocation.addEventListener("click", currentPosition);
 
 document.querySelector("#farenheit").addEventListener("click", showFarenheitTemp);
 document.querySelector("#celcius").addEventListener("click", showCelciusTemp);
+displayWeatherForecast();
