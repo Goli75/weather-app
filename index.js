@@ -82,4 +82,3 @@ buttonLocation.addEventListener("click", currentPosition);
 
 document.querySelector("#farenheit").addEventListener("click", showFarenheitTemp);
 document.querySelector("#celcius").addEventListener("click", showCelciusTemp);
-displayWeatherForecast();
