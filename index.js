@@ -23,7 +23,24 @@ date.innerHTML = `${day}, ${hours}:${minutes}`;
 let units = "metric";
  
 function displayWeatherForecast() {
-  document.querySelector("#weather-forecast").innerHTML = "weather-forecast"; 
+  document.querySelector("#weather-forecast").innerHTML = weatherForecastHTML; 
+  let weatherForecastHTML = `<div class="row">`;
+  let days = ["Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function(day){
+
+    weatherForecastHTML = weatherForecastHTML + `
+  <div class="col-3">
+    <div class="day">${day}</div>
+    <img src="https://openweathermap.org/img/wn/50d@2x.png" alt="" width="50"/>
+    <div class="max-min-temp">  
+      <span class="max-temp"> 18°</span>
+      <span class="min-temp"> 12°</span>
+    </div>
+</div>`;
+  });
+
+weatherForecastHTML = `</div>`;
+document.querySelector("#weather-forecast").innerHTML = weatherForecastHTML;
 }
 
 function showPosition(response) {
@@ -75,6 +92,8 @@ farenheit.classList.remove("active");
 document.querySelector("#temperature").innerHTML = celciusTemperature;
  }
 let celciusTemperature = null;
+displayWeatherForecast();
+
 let forms = document.querySelector("#searched-city");
 forms.addEventListener("submit", search);
 let buttonLocation = document.querySelector("#current");
