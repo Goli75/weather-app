@@ -77,10 +77,10 @@ text-decoration: none;
    margin-top: 20px;
  }
  .forecast .day {
-   color:rgb(8, 90, 19);
-   font-size: 15px;
+   color:rgb(35, 201, 223);
+   font-size: 20px;
  }
  .forecast .max-min-temp {
-   font-size: 11px;
-   color:cadetblue;
+   font-size: 15px;
+   color:rgb(235, 49, 127);
  }
