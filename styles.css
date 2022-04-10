@@ -1,3 +1,9 @@
+.app {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 10px;
+  border: 1px solid gray;
+}
 
 h1 {
     text-align: center;
