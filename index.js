@@ -38,9 +38,9 @@ function displayWeatherForecast(response) {
   let weatherForecastHTML = `<div class="row">`;
 
   forecast.forEach(function(forecastDay, index){
-if (index < 4) { 
+if (index < 6) { 
     weatherForecastHTML = weatherForecastHTML + `
-  <div class="col-3">
+  <div class="col-2">
     <div class="day">${formatDay(forecastDay.dt)}</div>
     <img src="https://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="" width="50"/>
     <div class="max-min-temp">  
