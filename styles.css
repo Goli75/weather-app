@@ -1,3 +1,4 @@
+
 h1 {
     text-align: center;
     font-size: 50px;
@@ -10,7 +11,6 @@ h1 {
     left: 10px;
     font-size: 45px;
     text-align: center;
-    color: yellow;
   }
   p {
     font-size: 20px;
@@ -83,4 +83,7 @@ text-decoration: none;
  .forecast .max-min-temp {
    font-size: 15px;
    color:rgb(235, 49, 127);
+ }
+ .color {
+   color: rgb(50, 12, 85);
  }
