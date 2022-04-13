@@ -55,8 +55,9 @@ if (index < 6) {
 weatherForecastHTML = weatherForecastHTML + `</div>`;
 weatherForecastElement.innerHTML = weatherForecastHTML;
 }
+
 function getWeatherForecast(coordinates) {
-console.log(coordinates);
+
 let apiKey = "a71922a462ba2496a97237966e452f8d";
 let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&
 units=metric`
@@ -75,6 +76,7 @@ function showPosition(response) {
 celciusTemperature = Math.round(response.data.main.temp);
 getWeatherForecast(response.data.coord);
 }
+
 function currentPosition(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchPosition);
@@ -82,12 +84,11 @@ function currentPosition(event) {
 
 function searchPosition(position) {
   let apiKey = "a71922a462ba2496a97237966e452f8d";
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+let lat = position.coordinate.latituse;
+let lon = position.coordinate.longitude;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showPosition);
-}
-
+} 
 
 function search(event) {
   event.preventDefault();
