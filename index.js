@@ -103,8 +103,8 @@ function search(event) {
 
 function showFarenheitTemp(event) {
   event.preventDefault();
-  farenheit.classList.add("active");
   celcius.classList.remove("active");
+  farenheit.classList.add("active");
 let farenheitTemperature = (celciusTemperature * 9) / 5 + 32;
 document.querySelector("#temperature").innerHTML = Math.round(farenheitTemperature);
 }
